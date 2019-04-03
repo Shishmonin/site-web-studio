@@ -13,7 +13,7 @@ console.log(sometime);
 let persone = {
   name: "John",
   age: 25,
-  isMarried: false
+  isMarried: true
 };
 
 console.log(persone["name"]);
