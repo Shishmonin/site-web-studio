@@ -1,0 +1,1824 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  background-color: $white;
+  color: $blue;
+  letter-spacing: 0.09em;
+  background: #F9FAFC;
+}
+::-webkit-input-placeholder { color: #c1c6ce; }
+:-ms-input-placeholder { color: #c1c6ce; }
+::-moz-placeholder { color: #c1c6ce; }
+:-moz-placeholder { color: #c1c6ce; }
+
+h1 {
+  font-family: Montserrat;
+  font-size: 52px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+h2 {
+  font-family: Montserrat;
+  font-size: 42px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $blue;
+}
+
+h3 {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $blue;
+}
+
+a,
+a:hover,
+a:active {
+  text-decoration: none;
+  transition: all 0.5s ease;
+  color: $blue;
+}
+
+p {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  // line-height: normal;
+  letter-spacing: normal;
+}
+
+ul,
+li {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.d-flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+
+
+// СВОЙСТВА ШАПКИ САЙТА//////////////////////////////////////////////////////////////
+header {
+  flex-wrap: wrap;
+}
+// КОНТЕЙНЕР ДЛЯ БЭКГРАУНДА И ТЕНЕЙ
+.header_top {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+  height: 70px;
+  box-shadow: 0 -10px 25px 0 rgba(19, 77, 127, 0.17);
+}
+// КОНТЕЙНЕР ДЛЯ БЭКГРАУНДА И ТЕНЕЙ
+.header_down {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  height: 46px;
+  background: $grey-dg;
+  box-shadow: 0 10px 25px 0 rgba(19, 77, 127, 0.17);
+
+}
+// КОНТЕЙНЕР ДЛЯ ЗАДАНИЯ ШИРИНЫ КОНТЕНТА
+.container_top {
+  width: 100%;
+  max-width: 1208px;
+  margin: 0 auto;
+  position: relative;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+}
+// КОНТЕЙНЕР С ЛОГОТИПОМ И ПЕРЕКЛЮЧАТЕЛЕМ СТАТУСА ПОЛЬЗОВАТЕЛЯ
+.left {
+  width: 34%;
+  max-width: 407px;
+  align-items: center;
+  justify-content: space-between;
+}
+// КОНТЕЙНЕР С ГЕОПОЗИЦИЕЙ КНОПКОЙ ЗАЯВКИ И ИКОНКОЙ ПРОФИЛЯ
+.right {
+  width: 62%;
+  max-width: 687px;
+  align-items: center;
+  justify-content: flex-end;
+}
+// КОНТЕЙНЕР ДЛЯ ЗАДАНИЯ ШИРИНЫ КОНТЕНТА В ШАПКЕ НАВИГАЦИИ
+.container_down {
+  max-width: 1208px;
+  margin: 0 auto;
+  position: relative;
+  height: 46px;
+  // border: 2px solid red;
+  align-items: center;
+  justify-content: flex-start;
+}
+// ЛОГОТИП В ШАПКЕ
+.logo {
+  width: 30%;
+  max-width: 119px;
+}
+// ПЕРЕКЛЮЧАТЕЛЬ СТАТУСА ПОЛЬЗОВАТЕЛЯ (ЗАКАЗЧИК И ИСПОЛНИТЕЛЬ)
+.user_status {
+  width: 69%;
+  max-width: 239px;
+  justify-content: space-between;
+}
+.user_status_item {
+  margin-left: 10px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  a:hover {
+    color: $red;
+    border-bottom: 3px solid $red;
+  }
+}
+// ОБЕРТКА БЛОКОВ ГЕОПОЗИЦИИ КНОПКИ ЗАЯВКИ И ИКОНКИ ПРОФИЛЯ
+.geo_btn_prof {
+  width: 685px;
+  align-items: center;
+  justify-content: space-between;
+}
+.geoposition {
+  align-items: center;
+}
+.city {
+  margin-left: 10.5px;
+  border-bottom: 2px dashed $whgrey;
+}
+// ОБЕРТКА КНОПКИ И ИКОНКИ ПРОФИЛЯ
+.btm_profile {
+  width: 75%;
+  max-width: 481px;
+  align-items: center;
+  justify-content: space-between;
+}
+// КНОПКА ЗАЯВКИ
+.btn {
+  width: 37%;
+  max-width: 168px;
+  height: 42px;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px 0 rgba(19, 77, 127, 0.17);
+  background-color: $red;
+  align-items: center;
+  justify-content: space-around;
+  p {
+    font-size: 13px;
+    color: $white;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+}
+// ИКОНКА ПРОФИЛЯ
+.profile {
+  width: 59%;
+  max-width: 290px;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 31px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  .line {
+    width: 30px;
+    height: 30px;
+    border-left: 1px solid $whgrey;
+  }
+}
+.profile_info {
+  margin-left: 15px;
+}
+.profile_name {
+  font-weight: 600;
+}
+.profile_status {
+  font-size: 12px;
+  font-weight: 500;
+  color: $whgrey;
+  margin-top: 4px;
+  letter-spacing: 0.04em;
+}
+// ГАЛКА ВЫПАДАЮЩЕГО МЕНЮ НА ПРОФИЛЕ В ШАПКЕ
+.pointer_profile {
+  margin-left: auto;
+}
+
+// ОБЕРТКА НАВИГАЦИЯ ПО САЙТУ
+.menu {
+  width: 695px;
+  max-width: 695px;
+  justify-content: space-between;
+}
+.menu_item {
+  a {
+    font-size: 13px;
+    font-weight: 600;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+}
+
+
+// ОСНОВНОЙ ПЕРВЫЙ ЭКРАН///////////////////////////////////////////////////////////
+// БЭКГРАУНД ПЕРВОГО ЭКРАНА
+.main_content {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background: url(../img/bg-01@2x.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.88;
+  letter-spacing: normal;
+  text-align: center;
+  color: $white;
+// ЗАГОЛОВОК ПЕРВОГО ПОРЯДКА С ПОДЗАГОЛОВКОМ НА ПЕРВОМ ЭКРАНЕ
+  .ofer {
+    max-width: 712px;
+    margin-top: 100px;
+    justify-content: center;
+    p {
+      font-size: 16px;
+      font-weight: 500;
+      font-stretch: expanded;
+      margin-top: 25px;
+    }
+  }
+// ПОЛЕ ВЫБОРА НЕОБХОДИМЫХ РАБОТ НА ПЕРВРМ ЭКРАНЕ
+  .type_request {
+    width: 85%;
+    // height: 60px;
+    max-width: 1000px;
+    border-radius: 6px;
+    box-shadow: 0 9px 56px 0 rgba(19, 77, 127, 0.17);
+    background-color: $white;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  .type_request_left {
+    justify-content: center;
+    align-items: center;
+    svg text {
+      fill: $white;
+      letter-spacing: 0.04em;
+      font-weight: 500;
+    }
+  }
+  .type_request_center {
+    width: 51%;
+    height: 60px;
+    color: $drgrey;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 40px;
+    p {
+      font-size: 16px;
+      font-weight: 500;
+      font-stretch: expanded;
+      margin-right: 20px;
+    }
+  }
+  .type_request_right {
+    width: 229px;
+    height: 60px;
+    border-radius: 6px;
+    background-color: $red;
+    justify-content: center;
+    align-items: center;
+  }
+}
+// ИНСТРУКЦИЯ ПОЛЬЗОВАНИЯ РЕСУРСОМ НА ПЕРВОМ ЭКРАНЕ
+.instruction {
+  width: 100%;
+  max-width: 1208px;
+  height: 15%;
+  max-height: 105px;
+  margin-top: 100px;
+  margin-bottom: 90px;
+  justify-content: space-evenly;
+  font-weight: 500;
+  align-items: flex-start;
+  img {
+    margin-bottom: 29px;
+  }
+  .line {
+    width: 4%;
+    max-width: 35px;
+    height: 1px;
+    border-bottom: 3px dashed $whgrey;
+    margin-top: 3.5vh;
+  }
+}
+.instruction_item {
+  width: 17%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  line-height: normal;
+}
+
+// ВТОРОЙ ЭКРАН С КАТЕГОРИЯМИ РАБОТ/////////////////////////////////////////////////////
+// ОБЕРТКА С ЗАДАНИЕМ ШИРИНЫ КОНТЕНТА И ANSVO НА БЭКГРАУНДЕ
+.container_category {
+  width: 100%;
+  max-width: 1208px;
+  margin: 0 auto;
+  position: relative;
+  flex-direction: column;
+  background-image: url(../img/ansvo-body.svg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  height: 664px;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.88;
+  letter-spacing: normal;
+  color: $drgrey;
+  h2 {
+    margin-top: 90px;
+  }
+}
+// КАТЕГОРИИ
+.category {
+  margin-top: 65px;
+  width: 100%;
+  max-width: 1208px;
+  justify-content: space-between;
+// СТРОИТЕЛЬСТВО
+  .houses {
+    margin-left: -12px;
+    margin-right: 1.5vw;
+  }
+// РЕМОНТ
+  .helmet {
+    margin-top: -5px;
+    margin-left: -15px;
+    margin-right: 1.4vw;
+  }
+// ПРОЕКТИРОВАНИЕ И ДИЗАЙНТ ИНТ
+  .pencil,
+  .roller {
+    margin-left: -10px;
+    margin-right: 1.7vw;
+  }
+}
+// КОЛОНКИ КАТЕГОРИЙ
+.category_houses,
+.category_helmet,
+.category_engineering_interiordesign {
+  align-items: flex-start;
+  width: 33%;
+  justify-content: flex-start;
+  padding-right: 2vw;
+}
+.category_article {
+  p {
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: normal;
+    color: $red;
+  }
+  section {
+    margin-top: 3.6vh;
+  }
+  li {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 2.6;
+    color: #7d8392;
+  }
+}
+.category_item {
+  margin-top: 50px;
+}
+
+
+// ТРЕТИЙ ЭКРАН С НОВЫМИ ЗАЯВКАМИ/////////////////////////////////////////////////////
+.container_request {
+  width: 100%;
+  max-width: 1208px;
+  margin: 0 auto;
+  position: relative;
+  flex-direction: column;
+  background: #F9FAFC;
+  height: 1156px;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.88;
+  letter-spacing: normal;
+  color: $drgrey;
+}
+// ОБЕРТКА НАЗВАНИЯ С ПЕРЕКЛЮЧАТЕЛЕМ РУБРИК
+.container_request_top {
+  margin-top: 90px;
+  width: 100%;
+  max-width: 1198px;
+  justify-content: space-between;
+  align-items: center;
+}
+// СВОЙСТВА ПЕРЕКЛЮЧАТЕЛЯ РУБРИК ЗАЯВОК
+.switch_request {
+  width: 38%;
+  max-width: 454px;
+  height: 48px;
+  border-radius: 6px;
+  box-shadow: 0 9px 56px 0 rgba(19, 77, 127, 0.17);
+  background-color: $white;
+  align-items: center;
+  .switch-field {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    justify-content: space-between;
+  }
+  .switch-field input {
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+  }
+  .switch-field label {
+    float: left;
+    padding-top: 11px;
+    padding-left: 5px;
+    padding-right: 7px;
+  }
+  .switch-field label {
+    align-self: stretch;
+    width: 33%;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    text-shadow: none;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+  }
+  .switch-field label:hover {
+    cursor: pointer;
+  }
+  .switch-field input:checked+label {
+    width: 33%;
+    background-color: $red;
+    color: $white;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 6px;
+  }
+}
+// ОБЕРТКА ДЛЯ ЗАЯВОК
+.container_request_main {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 1208px;
+  height: 801px;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: -30px;
+}
+// СВОЙСТВА ЗАЯВКИ
+.request_main_item {
+  width: 100%;
+  max-height: 247px;
+  border-radius: 8px;
+  box-shadow: 0 9px 56px 0 rgba(19, 77, 127, 0.17);
+  background-color: $white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+// Для статуса незавершенной заявки
+.accept {
+  .bar_noaccept_request {
+    display: none;
+  }
+}
+// Для статуса завершенной заявки
+.noaccept {
+  .bar_accept_request {
+    display: none;
+  }
+}
+// Когда нет проекта
+.progectno {
+  .status_bar_left {
+    max-width: 427px;
+  }
+  .bar_progect {
+    display: none;
+  }
+}
+// Статус открытый тендер
+.unlock {
+  .bar_lock_tender {
+    display: none;
+  }
+}
+// Статус закрытый тендер
+.lock {
+  .bar_unlock_tender {
+    display: none;
+  }
+}
+// Когда нет проекта
+.nopro {
+  .bar_onlypro {
+    display: none;
+  }
+}
+
+// БЛОК СО СТАТУСОМ ЗАЯВКИ
+.status_bar {
+  width: 100%;
+  max-width: 1128px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+// Обертка для статусов заявки
+.status_bar_left {
+  width: 48%;
+  max-width: 531px;
+  justify-content: space-between;
+  align-items: center;
+}
+// Прием заявок идет
+.bar_accept_request {
+  width: 163px;
+  height: 28px;
+  border-radius: 6px;
+  background-color: $green;
+  font-size: 12px;
+  font-weight: 600;
+  color: #417505;
+  align-items: center;
+  justify-content: center;
+}
+// Прием заявок окончен
+.bar_noaccept_request {
+  width: 197px;
+  height: 28px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: #d0d6e0;
+  color: $drgrey;
+  align-items: center;
+  justify-content: center;
+}
+.bar_progect {
+  p {
+    margin-left: 6px;
+    color: $red;
+    font-weight: 400;
+    margin-top: 1px;
+  }
+}
+// Открытый тендер
+.bar_unlock_tender {
+  p {
+    margin-left: 6px;
+    color: $whgrey;
+    font-weight: 300;
+    margin-top: 1px;
+  }
+}
+// Закрытый тендер
+.bar_lock_tender {
+  p {
+    margin-left: 6px;
+    color: $blue;
+    font-weight: 400;
+    margin-top: 1px;
+  }
+}
+// Счетчик просмотров
+.bar_view {
+  p {
+    margin-left: 6px;
+    color: $whgrey;
+    font-weight: 400;
+    margin-top: 1px;
+  }
+}
+// Правая часть с указание только PRO
+.bar_onlypro {
+  font-size: 12px;
+  font-weight: 500;
+  color: $whgrey;
+  span {
+    font-weight: 600;
+    color: $white;
+    padding: .4rem .5rem;
+    border-radius: 4px;
+    background-color: $red;
+  }
+}
+// ОБЕРТКА ДЛЯ БЮДЖЕТА И НАЗВАНИЯ ЗАЯВКИ
+.name_bar {
+  width: 100%;
+  max-width: 1128px;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  margin-bottom: 15px;
+}
+// Свойства бюджета
+.bar_cost {
+  font-size: 14px;
+  color: $drgrey;
+  font-weight: 500;
+  span {
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    line-height: normal;
+    color: $red;
+  }
+}
+// ОБЕРТКА ДЛЯ ТЕХНОЛОГИИ ПЛОЩАДИ И АДРЕСА ОБЪЕКТА
+.tender_info {
+  width: 100%;
+  max-width: 1128px;
+  border-bottom: 1px solid #d0d6e0;
+  padding-bottom: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  margin-bottom: 15px;
+  .info_item {
+    margin-right: 118px;
+    .item_text {
+      color: $blue;
+      margin-top: 4px;
+    }
+  }
+}
+// ОБЕРТКА ДЛЯ ВРЕМЕНИ ПУБЛИКАЦИИ И ИКОНКИ ХОЗЯИНА ЗАЯВКИ
+.time_info {
+  width: 100%;
+  max-width: 1128px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+// Свойства даты
+.time_open {
+  margin-right: 53px;
+  font-weight: 500;
+}
+.time_open,
+.time_close {
+  span {
+    margin-left: 10px;
+    font-weight: 500;
+  }
+}
+.item_data {
+  margin-top: 5px;
+  span {
+    font-size: 16px;
+    color: $blue;
+  }
+}
+// БЛОК С ИКОНКОЙ ХОЗЯИНА ЗАЯВКИ
+.master_tender {
+  max-height: 42px;
+  width: 70%;
+  justify-content: flex-end;
+  .icon_master_tender {
+    max-width: 42px;
+    max-height: 42px;
+    margin-right: 20px;
+  }
+}
+.status_master_tender {
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $drgrey;
+  display: inline-block;
+  margin-top: 2px;
+}
+.name_master_tender {
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $blue;
+  display: inline-block;
+  margin-top: 3px;
+}
+// КНОПКА ПОСМОТРЕТЬ ВСЕ ТЕНДЕРЫ
+.btn_see_all_tender {
+  width: 376px;
+  height: 53px;
+  border-radius: 6px;
+  box-shadow: 0 9px 56px 0 rgba(19, 77, 127, 0.17);
+  background-color: $red;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  margin-top: 40px;
+  font-weight: 600;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: $white;
+}
+
+// ЧЕТВЕРТЫЙ ЭКРАН С НОВЫМИ ЗАЯВКАМИ///////////////////////////////////////////////////
+// ОБЕРТКА ДЛЯ ОТЗЫВОВ О КОМПАНИИ
+.reviews {
+  width: 100%;
+  max-width: 1208px;
+  margin: 0 auto;
+  position: relative;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.88;
+  letter-spacing: normal;
+  color: $drgrey;
+}
+// БЛОК С НАЗВАНИЕМ РАЗДЕЛА И ПРОКРУТКОЙ ОТЗЫВОВ ЛЕВО ПРАВО
+.container_reviews_top {
+  margin-top: 80px;
+  width: 100%;
+  max-width: 1198px;
+  justify-content: space-between;
+  align-items: center;
+}
+// Левый таб
+.tab_left {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  box-shadow: 0 9px 56px 0 rgba(19, 77, 127, 0.17);
+  justify-content: center;
+}
+// Правый таб
+.tab_right {
+  margin-left: 22px;
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  box-shadow: 0 9px 56px 0 rgba(19, 77, 127, 0.17);
+  justify-content: center;
+}
+// БЛОК СО ВСЕМИ ОТЗЫВАМИ
+.container_reviews_main {
+  margin-top: 60px;
+  width: 100%;
+  max-width: 1208px;
+  flex-wrap: wrap;
+}
+// Свойства обертки отзыва
+.reviews_item {
+  width: 50%;
+  max-width: 604px;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+.coment_main {
+  position: relative;
+}
+// SVG облако комента
+.cloud {
+  img {
+    width: 115%;
+    margin-top: -47px;
+    margin-left: -55px;
+    margin-bottom: -50px;
+    position: relative;
+    z-index: 0;
+  }
+}
+// БЛОК С ИКОНКОЙ ИСПОЛНИТЕЛЯ И РЕЙТИНГОМ
+.coment_main_top {
+  width: 87%;
+  max-width: 524px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  z-index: 3;
+  margin-left: 30px;
+  margin-top: 11px;
+  padding-top: 10px;
+  flex-direction: column;
+}
+.company_info {
+  width: 100%;
+  border-bottom: 1px solid #dce3ed;
+  justify-content: space-between;
+  padding-bottom: 15px;
+}
+// Свойства Иконки с исполнителем
+.build-company {
+  max-height: 42px;
+  justify-content: flex-end;
+  .icon_build-company {
+    max-width: 42px;
+    max-height: 42px;
+    margin-right: 20px;
+  }
+}
+.status_build-company {
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $drgrey;
+  display: inline-block;
+  margin-top: 2px;
+}
+.name_build-company{
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: $blue;
+  display: inline-block;
+  margin-top: -5px;
+}
+// Свойства рейтинга
+.rating {
+  font-weight: 500;
+}
+// Свойства заглавия комментария
+.coment_title {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+// Свойства текста основного комментария
+.plus, .minus{
+  float: left;
+  color: $blue;
+  margin-right: 4px;
+  line-height: 1.43;
+  font-weight: 500;
+}
+.plus_text, .minus_text {
+  line-height: 1.43;
+  letter-spacing: 0.01rem;
+  font-weight: 500;
+}
+.coment_text_minus {
+  margin-top: 20px;
+  font-weight: 500;
+}
+.coment_bottom {
+  justify-content: space-between;
+  width: 96%;
+  .master_tender {
+    justify-content: flex-start;
+  }
+  .data_coment {
+    color: $whgrey;
+    font-weight: 500;
+  }
+}
+// КНОПКА ПОКАЗАТЬ БОЛЬШЕ ОТЗЫВОВ
+.btn_more_reviews {
+  width: 376px;
+  height: 53px;
+  border-radius: 6px;
+  box-shadow: 0 9px 56px 0 rgba(19, 77, 127, 0.17);
+  background-color: $red;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  margin-top: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: $white;
+  margin-bottom: 90px;
+}
+
+// ПЯТЫЙ ЭКРАН С СТАТЬЯМИ///////////////////////////////////////////////////////////////
+// ОБЕРТКА ОБЩАЯ
+.container_section {
+  width: 100%;
+  margin: 0 auto;
+  background: #F9FAFC;
+  justify-content: center;
+}
+// ШИРИНА КОНТЕНТА БЛОКА СТАТЕЙ
+.section_main {
+  width: 100%;
+  max-width: 1208px;
+  margin: 0 auto;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+// БЛОК С НАЗВАНИЕМ РАЗДЕЛА И ПРОКРУТКОЙ СТАТЕЙ ЛЕВО ПРАВО
+.section_main_top {
+  justify-content: space-between;
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+// ОБЕРТКА ДЛЯ СТАТЕЙ
+.section_main_content {
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+// Свойство статьи
+.section_main_content_article {
+  width: 31%;
+  max-width: 376px;
+  border-radius: 8px;
+  box-shadow: 0 9px 56px 0 rgba(19, 77, 127, 0.17);
+  background-color: $white;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+// Верх карточки статьи с логотипом и названием рубрики
+.article_rubric {
+  width: 84%;
+  max-width: 316px;
+  max-height: 22px;
+  margin-top: 30px;
+  align-items: center;
+  letter-spacing: 0.03em;
+  span {
+    color: $whgrey;
+    font-weight: 600;
+    margin-left: 20px;
+    margin-bottom: 2px;
+  }
+}
+// Свойства тела статьи с заголовком текстом и подробнее
+.article_main {
+  width: 84%;
+  max-width: 316px;
+  font-weight: 600;
+  margin-top: 29px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #dce3ed;
+  margin-bottom: 17px;
+}
+// Свойства текста статьи
+.article_main_text {
+  font-weight: 500;
+  line-height: 1.43;
+  color: $drgrey;
+  margin-top: 20px;
+}
+// Свойства читать подробнее
+.article_main_readmore {
+  color: $red;
+  letter-spacing: 0;
+  align-self: flex-start;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+// Низ карточки статьи с счетчиками и датой
+.article_info{
+  width: 84%;
+  max-width: 316px;
+  color: $whgrey;
+  letter-spacing: 0;
+  font-weight: 500;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  span {
+    margin-left: 10px;
+  }
+}
+// Свойства счетчика просмотров
+.article_info_view {
+  margin-left: -50px;
+  padding-left: 20px;
+}
+
+// ПОДВАЛ СТРАНИЦЫ//////////////////////////////////////////////////////////////
+// ОБЩАЯ ОБЕРТКА ПОДВАЛА
+footer {
+  width: 100%;
+}
+.footer_main {
+  width: 100%;
+  background-color: #3b4256;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+// ОБЕРТКА ДЛЯ ВЕРХА ПОДВАЛА С ЛОГО КОНТАКТАМИ И СОЦ СЕТЯМИ
+.footer_contacts {
+  width: 100%;
+  max-width: 1208px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #646f8f;
+}
+// Свойства блоков лого Контакты и соц сети
+.footer_contacts_item {
+  width: 25%;
+  justify-content: flex-start;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  img {
+    margin-right: 30px;
+  }
+  span {
+    display: inline-block;
+  }
+  .title {
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: normal;
+    color: #78819c;
+  }
+  .text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #f9fafc;
+    margin-top: 5px;
+  }
+}
+// ОБЕРТКА ДЛЯ НАВИГАЦИИ В ПОДВАЛЕ
+.footer_menu {
+  width: 100%;
+  max-width: 1208px;
+  align-items: flex-start;
+  justify-content: center;
+}
+// Свойства элементов навигации меню
+.footer_menu_item {
+  width: 25%;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  span {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #949cb1;
+    margin-bottom: 30px;
+    letter-spacing: 0;
+  }
+  a {
+    font-size: 14px;
+    font-weight: 500;
+    color: #78819c;
+    letter-spacing: 0;
+    margin-bottom: 20px;
+    span {
+      font-size: 12px;
+      font-weight: 600;
+      color: $white;
+      padding: .4rem .5rem;
+      border-radius: 4px;
+      margin-right: 5px;
+      background-color: $red;
+    }
+  }
+  .akaunt {
+    color: $white;
+  }
+}
+// ОБЕРТКА ДЛЯ НИЗА ПОДВАЛА
+.footer_down {
+  width: 100%;
+  background-color: #363c4f;
+  justify-content: center;
+  align-items: flex-start;
+}
+// ОБЕРТКА КОНТЕНТА НИЗА ПОДВАЛА
+.footer_down_info {
+  width: 100%;
+  max-width: 1208px;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+// Свойства элементов низа подвала
+.footer_down_info_item {
+  width: 33%;
+  span {
+    font-size: 14px;
+    font-weight: 600;
+    color: $white;
+  }
+}
+
+///////////////////////////////////////////////
+// КАТАЛОГ ИСПОЛНИТЕЛЕЙ
+////////////////////////////////////////////////
+// ОБЕРТКА ДЛЯ ВСЕГО MAIN
+main {
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+// Свойства для хлебных крошек
+.breadcrumbs {
+  width: 100%;
+  max-width: 1208px;
+  justify-content: flex-start;
+  margin-top: 40px;
+  font-size: 13px;
+  letter-spacing: normal;
+  a {
+    color: $drgrey;
+    margin-right: 13px;
+  }
+  .breadcrumbs_general {
+    color: $whgrey;
+  }
+  img {
+    margin-right: 13px;
+  }
+}
+// Свойства для заголовка h2
+.name_catalog {
+  width: 100%;
+  max-width: 1208px;
+  justify-content: flex-start;
+  margin-top: 30px;
+}
+// Свойства обертки колонок основной и фильтра
+.main_catalog {
+  width: 100%;
+  max-width: 1208px;
+  margin-bottom: 100px;
+  // border: 2px solid red;
+  justify-content: space-between;
+}
+// Основная колонка с карточками компаний и поисковиком
+.main_catalog_column {
+  width: 75%;
+  max-width: 896px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+// Свойства поля поиска
+.catalog_search {
+  width: 100%;
+  height: 60px;
+  border-radius: 6px;
+  box-shadow: 0 9px 56px 0 rgba(19, 77, 127, 0.17);
+  margin-top: 27px;
+  margin-bottom: 30px;
+  input {
+    width: 94%;
+    border: none;
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: normal;
+  }
+}
+
+// ОБЕРТКА ДОПОЛНИТЕЛЬНОГО ФИЛЬТРА В КАТАЛОГЕ ТЕНДЕРОВ
+// Свойства обертки дополнительного фильтра
+.catalog_additional_filter {
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #646f8f;
+}
+
+.addiction_filter {
+  width: 53%;
+  justify-content: space-between;
+    input {
+    display: none;
+  }
+  label {
+    text-decoration: none;
+    svg {
+      margin-left: 10px;
+      width: 10px;
+      height: 10px;
+      transform:rotate(0deg)
+    }
+  }
+  input:checked + label {
+    color: $red;
+  }
+  input:checked + label svg{
+    transform:rotate(180deg);
+  }
+  input:checked +label #Page-1 {
+    fill: $red;
+  }
+}
+
+
+// Свойства счетчика числа тендеров
+.catalog_tender_meter {
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #b4bbc5;
+}
+
+
+// ОБКРТКА СВОЙСТВ КАРТОЧКИ КОМПАНИИ
+.catalog_card_company {
+  width: 100%;
+  max-width: 896px;
+  // height: 276px;
+  border-radius: 6px;
+  box-shadow: 0 9px 56px 0 rgba(19, 77, 127, 0.17);
+  background-color: $white;
+  padding: 30px 0 20px 0;
+  margin-bottom: 20px;
+  justify-content:space-evenly;
+}
+// Свойства левой колонки в карточке
+.catalog_card_company_icon {
+  width: 9%;
+  max-width: 80px;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  object-fit: contain;
+  align-items: stretch;
+  justify-content: center;
+  // Свойства круга
+  .icon_profile_company{
+    background: #f9fafc;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 0;
+    padding: 50% 0;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    // Свойства иконки компании
+    img {
+      width : 70%;
+      height : 70%;
+      max-width : 70%;
+      max-height : 70%;
+      margin : 0;
+      padding : 0;
+      position : absolute;
+      left : 15%;
+      top : 15%;
+      // transform-style : preserve-3d;
+    }
+  }
+  // свойства значка проверено
+  .checked_ansvo {
+    width: 80px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: #7fc434;
+    justify-content:space-evenly;
+    align-items: center;
+    span {
+      font-family: Roboto;
+      font-size: 10px;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: $white;
+    }
+  }
+}
+// Свойства правой колонки карточки с информацией
+.catalog_card_company_info {
+  width: 82%;
+  max-width: 726px;
+  flex-direction: column;
+  // margin-left: 20px;
+}
+
+.card_company_info_top {
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  margin-bottom: -2px;
+  // margin-right: auto;
+  .card_company_info_top-name {
+    a {
+      font-size: 20px;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: $blue;
+      margin-right: 10px;
+      margin-top: 6px;
+      margin-bottom: 10px;
+    }
+  }
+  .card_company_info_top-pro {
+    width: 30.1px;
+    height: 19.6px;
+    border-radius: 2.8px;
+    background-color: $red;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6px;
+
+    span {
+      font-size: 9px;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: $white;
+    }
+  }
+  // ОБЕРТКА ДЛЯ КНОПОК ИЗБРАННОЕ И ПРИГЛАСИТЬ В ТЕНДЕР
+  .card_company_info_top-btns {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+
+    // Свойства кнопки добавить в избранное
+    .card_company_info_top-favorite {
+      width: 44px;
+      height: 42px;
+      object-fit: contain;
+      border-radius: 6px;
+      border: solid 1px #d0d6e0;
+      justify-content: center;
+      margin-right: 20px;
+      // margin-left: 20px;
+      background: none;
+    }
+    // Свойства кнопки пригласить в тендер
+    .card_company_info_top-tenderlink {
+      // width: 178px;
+      // height: 42px;
+      padding: 13px 17px;
+      object-fit: contain;
+      border-radius: 6px;
+      background-color: $red;
+      justify-content: center;
+      span {
+        font-size: 13px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: $white;
+      }
+    }
+  }
+}
+// Свойства блока рейтинга и счетчика комментариев
+.card_company_info_raiting-feedback {
+  margin-left: 21px;
+  img {
+    margin-top: 2px;
+    width: 15px;
+    height: 15px;
+  }
+  a {
+    margin-left: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $blue;
+    span {
+      color: $whgrey;
+    }
+  }
+}
+// Свойства блока с геопозицией компании
+.card_company_info_address {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $whgrey;
+  margin-top: 14px;
+  img {
+    margin-right: 5px;
+  }
+  span {
+    margin-top: 2px;
+  }
+}
+// Свойства для блока текста о компании
+.card_company_info_about {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  color: $drgrey;
+  margin-top: 22px;
+}
+// Свойства числа побед и числа бригад
+.card_company_info_metrics {
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $blue;
+  margin-top: 21px;
+  padding-bottom: 20px;
+  align-items: flex-end;
+  border-bottom: 1px solid #e7ebf2;
+  img {
+    width: 16px;
+    height: 18px;
+  }
+  span {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: $whgrey;
+  }
+  .card_company_info_metrics-victory {
+    margin-right: 83px;
+    justify-content: flex-start;
+    // align-items: center;
+  }
+}
+// Свойства для категорий услуг в карточке компании
+.card_company_info_categorys {
+  width: 100%;
+  flex-wrap: wrap;
+
+  .card_company_info_categorys-item {
+    height: 28px;
+    border-radius: 6px;
+    padding: 0 21px;
+    margin-top: 20px;
+    background-color: #e7ebf2;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #a5abbc;
+    margin-right: 20px;
+  }
+}
+// Свойства для статуса онлайн/офлайн
+.card_company_info_categorys-item.onsite {
+  margin-left: auto ;
+  margin-right: 0;
+  margin-top: 20px;
+  padding: 0;
+  background: none;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #68ab1e;
+}
+// Свойства кнопки ПОказать еще 10
+.catalog_btn_more {
+  padding: 17px 70px;
+  margin-top: 40px;
+  border-radius: 6px;
+  border: none;
+  background-color: #e7ebf2;
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #b4bbc5;
+  align-self: center;
+}
+
+.main_filter_column {
+  width: 23%;
+  max-width: 272px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.catalog_ispolniteli_filter_item {
+  flex-wrap: wrap;
+  .filter_title {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #b4bbc5;
+    margin-bottom: 15px;
+  }
+  button {
+    width: 100%;
+    height: 60px;
+    padding: 21px 20px;
+    border-radius: 6px;
+    border: none;
+    background-color: #e7ebf2;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #a5abbc;
+    margin-top: -6px;
+    img {
+      width: 10px;
+      height: 5px;
+    }
+  }
+  .btn_filter_city {
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 40px;
+  }
+  // Свойства блока фильтра технологии строительства
+  .build_technology {
+    width: 100%;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #646f8f;
+    margin-top: -15px;
+
+    label {
+      width: 88%;
+      margin-top: 20px;
+
+    }
+    label::before {
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border-radius: 4px;
+      background-color: #e7ebf2;
+      vertical-align: bottom;
+      margin-right: 12px;
+    }
+    input {
+      display: none;
+    }
+    input:checked + label::before {
+      background-color: $red;
+      content: '';
+      background-image: url(../img/checkmark.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+
+    }
+  }
+}
+.filter_comm {
+  margin-top: 20px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #646f8f;
+  .filter_title {
+    margin-top: 20px;
+  }
+
+  label {
+    width: 88%;
+    margin-top: 5px;
+
+  }
+  label::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    background-color: #e7ebf2;
+    vertical-align: bottom;
+    margin-right: 12px;
+  }
+  input {
+    display: none;
+  }
+  input:checked + label::before {
+    background-color: $red;
+    content: '';
+    background-image: url(../img/checkmark.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+  }
+}
+
+.filter_category_work {
+  flex-wrap: wrap;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #646f8f;
+
+  .accordion {
+    flex-direction: column;
+  }
+
+  .accordion__item {
+  flex-direction: column;
+  margin-bottom: 25px;
+  }
+
+  .accordion__list {
+    display: none;
+    ul {
+      margin-left: 20px;
+    }
+    ol {
+      margin-top: 19px;
+    }
+    ol:first-child {
+      margin-top: 25px;
+    }
+    ol:active {
+      color: $red;
+    }
+    ul:target ol {
+      display: block;
+      color: $red;
+    }
+
+  }
+  .accordion__radio {
+    display: none;
+  }
+  .accordion__label {
+    // margin-bottom: 25px;
+    color: #646f8f;
+    text-decoration: none;
+    img {
+      margin-left: 10px;
+      width: 10px;
+      height: 10px;
+      transform:rotate(0deg)
+    }
+
+  }
+  .accordion__radio:checked + .accordion__label {
+    // color: red;
+    border-bottom: 2px dashed #646f8f;
+  }
+  .accordion__radio:checked + .accordion__label + .accordion__list {
+    display: block;
+  }
+  .accordion__radio:checked + .accordion__label img{
+    transform:rotate(180deg)
+  }
+
+}
+.filter_price {
+  justify-content: space-between;
+  margin-bottom: 40px;
+  input {
+    padding-left: 20px;
+    box-shadow: none;
+    width: 40%;
+    height: 60px;
+    border-radius: 6px;
+    border: none;
+    background-color: #e7ebf2;
+    border-radius: 8px;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #a5abbc;
+    text-align: start;
+  }
+}
