@@ -1,0 +1,238 @@
+@media screen and (max-width: 1024px) {
+  .first_screen{
+    max-height: 550px;
+
+  }
+  .element{
+    width: 35%;
+    height: 550px;
+  }
+
+  .section{
+    width: 39%;
+    padding-top: 10vh;
+  }
+
+  .left_bg_menu {
+    h1{
+      font-size: 48px;
+    }
+  }
+
+  .menu__btn{
+    width: 35px;
+    height: 35px;
+  }
+
+  .services_card{
+    width: 35%;
+    min-width: 350px;
+    height: 350px;
+  }
+
+  .usl1 {
+    top: 30%;
+    height: 70%;
+  }
+
+  .bg_menu_contact{
+    margin-top: 24vh;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header{
+    margin-top: 32px;
+  }
+
+  .logo{
+    // z-index: 20;
+  }
+
+  .first_screen{
+    max-height: 450px;
+  }
+
+  .element{
+    width: 30%;
+    height: 400px;
+  }
+
+  .section{
+    width: 54%;
+    padding-top: 5vh;
+    svg{
+      width: 350px;
+    }
+  }
+
+  .menu__btn{
+    width: 35px;
+    height: 35px;
+  }
+
+  .left_bg_menu {
+    h1{
+      font-size: 36px;
+    }
+  }
+
+  .bg_menu_contact{
+    margin-top: 12vh;
+    p{
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .bg_menu_socnet{
+    margin-top: 0px;
+    :first-child{
+      margin-right: 7px;
+      margin-left: -2px;
+    }
+    :nth-child(2){
+      margin-right: 11px;
+    }
+    a{
+      .menu_socnet_fb{
+        height: 28px;
+      }
+      .menu_socnet_inst{
+        height: 28px;
+      }
+      .menu_socnet_vk{
+        height: 31px;
+      }
+    }
+  }
+  .clients_svg{
+    svg{
+      // width: 350px;
+      margin-top: 80px;
+      margin-bottom: -30px;
+    }
+  }
+  // .container_clients{
+  //   flex-direction: column;
+  //   align-items: center;
+  // }
+  .container_clients{
+    padding: 0 20px;
+  }
+  .client{
+    width: 35%;
+    margin-top: 50px;
+    max-width: 200px;
+    img{
+      width: 75%;
+    }
+  }
+
+
+}
+
+@media screen and (max-width: 480px) {
+  header{
+    margin-top: 0px;
+  }
+  .menu__btn{
+    top: 10px;
+    margin-right: 3vw;
+  }
+  .logo{
+    width: 70px;
+    height: auto;
+  }
+  .tellmail{
+    display: none;
+  }
+  .social_network{
+    display: none;
+  }
+  .section{
+    margin-left: 10vw;
+    width: 100%;
+  }
+  .element{
+    display: none;
+  }
+  .left_bg_menu {
+    display: none;
+  }
+  .right_bg_menu{
+    width: 100%;
+  }
+  .bg_menu_contact{
+    margin-top: 10vh;
+    p{
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+  .services_svg{
+    svg{
+      width: 250px;
+      margin-top: 30px;
+      margin-bottom: -40px;
+    }
+  }
+  .clients_svg{
+    svg{
+      width: 250px;
+      margin-top: 30px;
+      margin-bottom: -40px;
+    }
+  }
+  .container_clients{
+    flex-direction: column;
+    // align-items: center;
+    align-content: center;
+  }
+  .client{
+    width: 100%;
+    margin-top: 20px;
+    // margin-left: 60px;
+    max-width: 280px;
+    img{
+      width: 65%;
+    }
+  }
+  .container_clients{
+    :nth-child(1){
+      img{
+        width: 75%;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 380px) {
+  .container_clients{
+    flex-direction: row;
+    align-content: center;
+  }
+  .client{
+    width: 50%;
+    margin-top: 10px;
+    // margin-left: 60px;
+    max-width: 280px;
+    img{
+      width: 65%;
+    }
+  }
+  .container_clients{
+    :nth-child(1){
+      img{
+        width: 75%;
+      }
+    }
+  }
+  .services_card{
+    min-width: 300px;
+    p {
+      font-size: 16px;
+    }
+  }
+}

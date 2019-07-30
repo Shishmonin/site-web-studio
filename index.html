@@ -2,1066 +2,627 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ANSVO</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>zhishi</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/sheetslider.min.css">
+
+  <!-- <link href="//cdn.jsdelivr.net/gh/zkreations/SheetSlider@2.2.0/dist/sheetslider.min.css" rel="stylesheet"/> -->
+
+  <!-- <link rel="stylesheet" href="./sheetslider.min.css"/> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/utils/Draggable.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <script type="text/javascript" src="./js/mycode.js"></script>
+  <script type="text/javascript" src="./js/sheetslider.js"></script>
+
 </head>
 <body>
-  <!-- ШАПКА САЙТА -->
-  <header class="header d-flex">
-    <!-- ФУТЕР ШАПКА ПРОФИЛЯ -->
-    <div class="header_top">
-      <div class="container_top d-flex">
-        <!-- БЛОК С ЛОГО И ПЕРЕКЛЮЧАТЕЛЕМ СТАТУСА ПОЛЬЗОВАТЕЛЯ -->
-          <div class="left d-flex">
-            <img src="img/logo.svg" alt="ANSVO" class=logo>
-            <!-- ПЕРЕКЛЮЧАТЕЛЬ СТАТУСА ПОЛЬЗОВАТЕЛЯ -->
-            <ul class="user_status d-flex">
-              <li class="user_status_item">
-                <a href="#" >Заказчикам</a>
-              </li>
-              <li class="user_status_item">
-                <a href="#" >Исполнителям</a>
-              </li>
-            </ul>
+  <header class="d-flex">
+    <img class="logo" src="./img/LogoZHISHI.svg" alt="logotip">
+<!-- КОНТАКТЫ В ШАПКЕ -->
+    <div class="headercenter d-flex">
+      <div class="tellmail d-flex">
+        <a href="#">+7 965 715 1991</a>
+        <a href="#">info@zhishi.agency</a>
+      </div>
+    </div>
+<!-- МЕНЮ НАВИГАЦИИ -->
+    <!-- <div class="containermenu d-flex">
+        <div class="menu">
+          <div class="hambergerIcon"></div>
+        </div>
+    </div> -->
+    <div class="containermenu">
+      <div class="hamburger-menu d-flex">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+
+        <div class="menu__box d-flex">
+          <div class="left_bg_menu">
+            <h1>Создание digital</br> продуктов любой</br> сложности</p>
           </div>
-
-          <div class="right d-flex">
-            <div class="geo_btn_prof d-flex">
-              <div class="geposition d-flex">
-                <img src="img/placeholder.svg" alt="geo" class="placeholder">
-                <p class="city">Москва и МО</p>
-              </div>
-              <div class="btm_profile d-flex">
-              <div class="btn d-flex">
-                <p>Подать заявку</p>
-                <img src="img/pointer-wh-down.svg" alt="pointer" class="pointer_btn">
-              </div>
-              <div class="profile d-flex">
-                <div class="line">
-                </div>
-                <img src="img/icon-user-header.svg" alt="user_icon" class="profile_img">
-                <div class="profile_info">
-                  <div class="profile_name">
-                    Виктор Живилков
-                  </div>
-                  <div class="profile_status">
-                    Заказчик
-                  </div>
-                </div>
-
-                <img src="img/pointer-gr-down.svg" alt="pointer" class="pointer_profile">
-              </div>
+          <div class="right_bg_menu d-flex">
+            <div class="bg_menu_contact">
+              <p><strong>Тел:</strong></br> +7 965 715 1991</p>
+              <p><strong>Почта:</strong></br> info@zhishi.agency</p>
+              <p><strong>Следите за нами:</strong></p>
+              <div class="bg_menu_socnet d-flex">
+                <a href="https://www.facebook.com/zhishi.agency/">
+                  <img class="menu_socnet_fb" src="./img/icons soc net/facebook.svg" alt="facebook">
+                </a>
+                <a href="https://www.instagram.com/zhishi.agency/">
+                  <img class="menu_socnet_inst" src="./img/icons soc net/instagram.svg" alt="inst">
+                </a>
+                <a href="https://vk.com/zhishi.agency">
+                  <img class="menu_socnet_vk" src="./img/icons soc net/vk.svg" alt="vk">
+                </a>
               </div>
             </div>
           </div>
-      </div>
-    </div>
-    <!-- ФУТЕР НАВИГАЦИЯ -->
-    <div class="header_down">
-      <div class="container_down d-flex">
-        <ul class="menu d-flex">
-          <li class="menu_item">
-            <a href="#">Тендеры</a>
-          </li>
-          <li class="menu_item">
-              <a href="#">Исполнители</a>
-          </li>
-          <li class="menu_item">
-              <a href="#">Как пользоваться?</a>
-          </li>
-          <li class="menu_item">
-              <a href="#">База знаний</a>
-          </li>
-          <li class="menu_item">
-              <a href="#">Служба поддержки</a>
-          </li>
-        </ul>
+        </div>
       </div>
     </div>
   </header>
-  <!-- ОСНОВНОЙ КОНТЕНТ -->
-  <main>
-    <!-- НАЧАЛО КОНТЕЙНЕРА ПЕРВОГО ЭКРАНА С ОФЕРОМ И ПОЛЕМ ЗАЯВКИ -->
-    <div class="main_content d-flex">
-
-      <div class="ofer">
-        <h1>Поиск исполнителей в строительстве и ремонте</h1>
-        <p>Заказать строительство и ремонт, так же легко, как заказать такси, а самое<br> главное бесплатно</p>
-      </div>
-
-      <div class="type_request d-flex">
-
-        <div class="type_request_left d-flex">
-            <svg width="229px" height="60px" viewBox="0 0 229 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                  <g id="-g-Zakazchik-Copy-6" transform="translate(-460.000000, -476.000000)" fill="#3B4256">
-                      <g id="Group-8" transform="translate(460.000000, 476.000000)">
-                          <path d="M6,0 L209,0 L229,30.2604252 L209,60 L6,60 C2.6862915,60 2.55313019e-13,57.3137085 2.54907206e-13,54 L2.55795385e-13,6 C2.55389573e-13,2.6862915 2.6862915,6.08718376e-16 6,0 Z" id="Rectangle"></path>
+  <main class="d-flex">
+    <!-- ПЕРВЫЙ ЭКРАН С ПАРАЛАКСОМ -->
+    <div class="first_screen d-flex">
+  <!-- БЛОК С СОЦИАЛЬНЫМИ СЕТЯМИ -->
+      <div class="social_network d-flex">
+        <div class="container d-flex">
+    
+            <input type="checkbox" id="actionMenuButton"/>
+            
+            <div class="actions-menu">
+              
+              <button class="btn btn--facebook" onclick="location.href = 'https://www.facebook.com/zhishi.agency/'">
+                <svg width="24px" height="24px" viewBox="0 0 256 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="Artboard-Copy-7" transform="translate(-433.000000, -2.000000)" fill="#1976D2">
+                          <g id="facebook" transform="translate(433.000000, 2.000000)">
+                              <path d="M256,176 L160,176 L160,112 C160,94.336 174.336,80 192,80 L224,80 L224,0 L160,0 C106.976,0 64,42.976 64,96 L64,176 L0,176 L0,256 L64,256 L64,512 L160,512 L160,256 L224,256 L256,176 Z" id="Path"></path>
+                          </g>
                       </g>
                   </g>
-              </g>
-              <text x="20%" y="58%">Мне требуется</text>
-          </svg>
-        </div>
-
-        <div class="type_request_center d-flex">
-          <p>Проектирование</p>
-          <img src="./img/pointer-gr-down-graf.svg" alt="point">
-        </div>
-        <div class="type_request_right d-flex"> Подать заявку</div>
-      </div>
-
-      <div class="instruction d-flex">
-
-        <div class="instruction_item">
-          <img src="./img/icon-sent-request.svg" alt="instruction_i">
-          Размести заявку
-        </div>
-
-        <div class="line"></div>
-
-        <div class="instruction_item">
-          <img src="./img/icon-give-offer.svg" alt="instruction_i">
-          Получай предложения
-        </div>
-
-        <div class="line"></div>
-
-        <div class="instruction_item">
-          <img src="./img/icon-questions.svg" alt="instruction_i">
-          Задавай вопросы
-        </div>
-
-        <div class="line"></div>
-
-        <div class="instruction_item">
-          <img src="./img/icon-take-best.svg" alt="instruction_i">
-          Выбирай лучшего
-        </div>
-      </div>
-    </div>
-    <!-- НАЧАЛО КОНТЕЙНЕРА ВИДЫ РАБОТ -->
-    <div class="container_category d-flex">
-
-      <h2>Какие виды работ размещают?</h2>
-      <div class="category d-flex">
-
-        <div class="category_houses d-flex">
-          <img src="./img/icon-houses.svg" class="houses" alt="house">
-          <div class="category_article">
-            <h3>Строительство</h3>
-            <p>от 150 р за м2</p>
-            <section>
-              <ul>
-                <li>Строительство "Под ключ"</li>
-                <li>Строительство "Теплого контура"</li>
-                <li>Устройство фундамента</li>
-                <li>Возведение стен и перекрытий</li>
-                <li>Устройство кровли</li>
-                <li>Внешняя отделка</li>
-                <li>Водосточная система</li>
-              </ul>
-            </section>
-          </div>
-        </div>
-
-        <div class="category_helmet d-flex">
-          <img src="./img/icon-helmet.svg" class="helmet" alt="helmet">
-          <div class="category_article">
-            <h3>Ремонт</h3>
-            <p>от 150 р за м2</p>
-            <section>
-              <ul>
-                <li>Капитальный ремонт</li>
-                <li>Ремонт в новостройке</li>
-                <li>Косметический ремонт</li>
-              </ul>
-            </section>
-          </div>
-        </div>
-
-        <div class="category_engineering_interiordesign">
-
-          <div class="d-flex">
-            <img src="./img/icon-pensil.svg" class="pencil" alt="pensil">
-            <div class="category_article">
-              <h3>Проектирование</h3>
-              <p>от 150 р за м2</p>
-            </div>
-          </div>
-
-          <div class="category_item d-flex">
-            <img src="./img/icon-roller.svg" class="roller" alt="roller">
-            <div class="category_article">
-              <h3>Дизайн интерьера</h3>
-              <p>от 150 р за м2</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <!-- НАЧАЛО КОНТЕЙНЕРА ЗАЯВОК -->
-    <div class="container_request d-flex">
-
-      <div class="container_request_top d-flex">
-        <h2>Новые заявки</h2>
-        
-        <div class="switch_request d-flex">
-
-            <div class="switch-field d-fex">
-              <input type="radio" id="switch_3_left" name="switch_3" value="yes" checked/>
-              <label for="switch_3_left">Строительство</label>
-              <input type="radio" id="switch_3_center" name="switch_3" value="maybe" />
-              <label for="switch_3_center">Ремонт</label>
-              <input type="radio" id="switch_3_right" name="switch_3" value="no" />
-              <label for="switch_3_right">Проектирование</label>
-            </div>
-
-        </div>
-      </div>
-
-      <div class="container_request_main d-flex">
-        
-        <div class="request_main_item accept unlock d-flex">
-
-          <div class="status_bar d-flex">
-
-            <div class="status_bar_left d-flex">
-              <div class="bar_accept_request d-flex">Идет прием заявок</div>
-              <div class="bar_noaccept_request d-flex">Прием заявок завершон</div>
-
-
-              <div class="bar_progect d-flex">
-                <img src="./img/have-progect.svg" alt="have-progect">
-                <p>Есть проект</p>
-              </div>
-
-              <div class="bar_unlock_tender d-flex">
-                <img src="./img/icon-unlock.svg" alt="unlock">
-                <p>Открытый тендер</p>
-              </div>
-
-              <div class="bar_lock_tender d-flex">
-                <img src="./img/icon-lock.svg" alt="unlock">
-                <p>Закрытый тендер</p>
-              </div>
-
-
-              <div class="bar_view d-flex">
-                <img src="./img/icon-eye.svg" alt="view">
-                <p>211</p>
-              </div>
-            </div>
-
-            <span class="bar_onlypro">
-              Только
-              <span>PRO</span>
-            </span>
-
-          </div>
-
-          <div class="name_bar d-flex">
-
-            <div class="bar_name_tender">
-              <h3>Строительство теплого контура</h3>
-            </div>
-
-            <div class="bar_cost">
-              <span>2 000 000 – 2 400 000</span>
-              руб.
-            </div>
-
-          </div>
-
-          <div class="tender_info d-flex">
-
-            <div class="info_item">
-              <div class="item_title">Технология:</div>
-              <div class="item_text">Каркасная</div>
-            </div>
-
-            <div class="info_item">
-              <div class="item_title">Площадь дома:</div>
-              <div class="item_text">98 м2</div>
-            </div>
-
-            <div class="info_item">
-              <div class="item_title">Адрес объекта:</div>
-              <div class="item_text">Московская обл., пос. Зеленая долина</div>
-            </div>
-
-          </div>
-
-          <div class="time_info d-flex">
-
-            <div class="time_open">
-
-              <div class="item_title">Опубликовано:</div>
-
-              <div class="item_data">
-                <img src="./img/icon-calendar.svg" alt="calendar">
-                <span>13.02.2018</span>
-              </div>
-
-            </div>
-
-            <div class="time_close">
-
-              <div class="item_title">Прием заявок до:</div>
-  
-              <div class="item_data">
-                <img src="./img/icon-calendar.svg" alt="calendar">
-                <span>13.03.2018</span>
-              </div>
-  
-            </div>
-
-            <div class="master_tender d-flex">
-              <img src="./img/icon-master-tender.png" class="icon_master_tender" alt="master tender">
+                </svg>
+                <div class="glow1"></div>
+                <div class="glow2"></div>
+                <div class="glow3"></div>
+              </button>
               
-              <div class="master_tender_info">
-                <span class="status_master_tender">Заказчик:</span> </br>
-                <span class="name_master_tender">Иван Иванов</span>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="request_main_item noaccept progectno lock nopro d-flex">
-
-            <div class="status_bar d-flex">
-  
-              <div class="status_bar_left d-flex">
-                <div class="bar_accept_request d-flex">Идет прием заявок</div>
-                <div class="bar_noaccept_request d-flex">Прием заявок завершон</div>
-  
-  
-                <div class="bar_progect d-flex">
-                  <img src="./img/have-progect.svg" alt="have-progect">
-                  <p>Есть проект</p>
-                </div>
-  
-                <div class="bar_unlock_tender d-flex">
-                  <img src="./img/icon-unlock.svg" alt="unlock">
-                  <p>Открытый тендер</p>
-                </div>
-  
-                <div class="bar_lock_tender d-flex">
-                  <img src="./img/icon-lock.svg" alt="unlock">
-                  <p>Закрытый тендер</p>
-                </div>
-  
-  
-                <div class="bar_view d-flex">
-                  <img src="./img/icon-eye.svg" alt="view">
-                  <p>211</p>
-                </div>
-              </div>
-  
-              <span class="bar_onlypro">
-                Только
-                <span>PRO</span>
-              </span>
-  
-            </div>
-  
-            <div class="name_bar d-flex">
-  
-              <div class="bar_name_tender">
-                <h3>Строительство теплого контура</h3>
-              </div>
-  
-              <div class="bar_cost">
-                <span>2 000 000 – 2 400 000</span>
-                руб.
-              </div>
-  
-            </div>
-  
-            <div class="tender_info d-flex">
-  
-              <div class="info_item">
-                <div class="item_title">Технология:</div>
-                <div class="item_text">Каркасная</div>
-              </div>
-  
-              <div class="info_item">
-                <div class="item_title">Площадь дома:</div>
-                <div class="item_text">98 м2</div>
-              </div>
-  
-              <div class="info_item">
-                <div class="item_title">Адрес объекта:</div>
-                <div class="item_text">Московская обл., пос. Зеленая долина</div>
-              </div>
-  
-            </div>
-  
-            <div class="time_info d-flex">
-  
-              <div class="time_open">
-  
-                <div class="item_title">Опубликовано:</div>
-  
-                <div class="item_data">
-                  <img src="./img/icon-calendar.svg" alt="calendar">
-                  <span>13.02.2018</span>
-                </div>
-  
-              </div>
-  
-              <div class="time_close">
-  
-                <div class="item_title">Прием заявок до:</div>
-    
-                <div class="item_data">
-                  <img src="./img/icon-calendar.svg" alt="calendar">
-                  <span>13.03.2018</span>
-                </div>
-    
-              </div>
-  
-              <div class="master_tender d-flex">
-                <img src="./img/icon-master-tender.png" class="icon_master_tender" alt="master tender">
-                  
-                <div class="master_tender_info">
-                  <span class="status_master_tender">Заказчик:</span> </br>
-                  <span class="name_master_tender">Иван Иванов</span>
-                </div>
-              </div>
-
-            </div>
-  
-        </div>
-
-        <div class="request_main_item accept  unlock d-flex">
-
-              <div class="status_bar d-flex">
-    
-                <div class="status_bar_left d-flex">
-                  <div class="bar_accept_request d-flex">Идет прием заявок</div>
-                  <div class="bar_noaccept_request d-flex">Прием заявок завершон</div>
-    
-    
-                  <div class="bar_progect d-flex">
-                    <img src="./img/have-progect.svg" alt="have-progect">
-                    <p>Есть проект</p>
-                  </div>
-    
-                  <div class="bar_unlock_tender d-flex">
-                    <img src="./img/icon-unlock.svg" alt="unlock">
-                    <p>Открытый тендер</p>
-                  </div>
-    
-                  <div class="bar_lock_tender d-flex">
-                    <img src="./img/icon-lock.svg" alt="unlock">
-                    <p>Закрытый тендер</p>
-                  </div>
-    
-    
-                  <div class="bar_view d-flex">
-                    <img src="./img/icon-eye.svg" alt="view">
-                    <p>211</p>
-                  </div>
-                </div>
-    
-                <span class="bar_onlypro">
-                  Только
-                  <span>PRO</span>
-                </span>
-    
-              </div>
-    
-              <div class="name_bar d-flex">
-    
-                <div class="bar_name_tender">
-                  <h3>Строительство теплого контура</h3>
-                </div>
-    
-                <div class="bar_cost">
-                  <span>2 000 000 – 2 400 000</span>
-                  руб.
-                </div>
-    
-              </div>
-    
-              <div class="tender_info d-flex">
-    
-                <div class="info_item">
-                  <div class="item_title">Технология:</div>
-                  <div class="item_text">Каркасная</div>
-                </div>
-    
-                <div class="info_item">
-                  <div class="item_title">Площадь дома:</div>
-                  <div class="item_text">98 м2</div>
-                </div>
-    
-                <div class="info_item">
-                  <div class="item_title">Адрес объекта:</div>
-                  <div class="item_text">Московская обл., пос. Зеленая долина</div>
-                </div>
-    
-              </div>
-    
-              <div class="time_info d-flex">
-    
-                <div class="time_open">
-    
-                  <div class="item_title">Опубликовано:</div>
-    
-                  <div class="item_data">
-                    <img src="./img/icon-calendar.svg" alt="calendar">
-                    <span>13.02.2018</span>
-                  </div>
-    
-                </div>
-    
-                <div class="time_close">
-    
-                  <div class="item_title">Прием заявок до:</div>
-      
-                  <div class="item_data">
-                    <img src="./img/icon-calendar.svg" alt="calendar">
-                    <span>13.03.2018</span>
-                  </div>
-      
-                </div>
-
-                <div class="master_tender d-flex">
-                  <img src="./img/icon-master-tender.png" class="icon_master_tender" alt="master tender">
-                    
-                  <div class="master_tender_info">
-                    <span class="status_master_tender">Заказчик:</span> </br>
-                    <span class="name_master_tender">Иван Иванов</span>
-                  </div>
-                </div>
-    
-              </div>
-    
-        </div>
-
-      </div>
-
-      <div class="btn_see_all_tender d-flex">Посмотреть все тендеры</div>
-
-    </div>
-    <!-- НАЧАЛО КОНТЕЙНЕРА ОТЗЫВЫ -->
-    <div class="reviews d-flex">
-        <div class="container_reviews_top d-flex">
-
-          <h2>Отзывы о компаниях</h2>
-          <div class="tabs d-flex">
-              <div class="tab_left d-flex">
-                <img src="./img/pointerleft.svg" alt="pointerleft">
-              </div>
-              <div class="tab_right d-flex">
-                <img src="./img/pointerright.svg" alt="pointerright">
-              </div>
-          </div>
-        </div>
-        
-        <div class="container_reviews_main d-flex">
-
-          <div class="reviews_item d-flex">
-
-            <div class="coment_main d-flex">
-
-              <div class="cloud d-flex">
-                <img src="./img/cloudmini.svg" alt="cloudmini">
-              </div>
+              <button class="btn btn--instagram" onclick="location.href = 'https://www.instagram.com/zhishi.agency/'">
+                <svg width="24px" height="24px" viewBox="0 0 552 552" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs>
+                      <linearGradient x1="50%" y1="99.7089109%" x2="50%" y2="0.776721582%" id="linearGradient-1">
+                          <stop stop-color="#E09B3D" offset="0%"></stop>
+                          <stop stop-color="#C74C4D" offset="30%"></stop>
+                          <stop stop-color="#C21975" offset="60%"></stop>
+                          <stop stop-color="#7024C4" offset="100%"></stop>
+                      </linearGradient>
+                      <linearGradient x1="50%" y1="146.098873%" x2="50%" y2="-45.1596833%" id="linearGradient-2">
+                          <stop stop-color="#E09B3D" offset="0%"></stop>
+                          <stop stop-color="#C74C4D" offset="30%"></stop>
+                          <stop stop-color="#C21975" offset="60%"></stop>
+                          <stop stop-color="#7024C4" offset="100%"></stop>
+                      </linearGradient>
+                      <linearGradient x1="50%" y1="658.140556%" x2="50%" y2="-140.029283%" id="linearGradient-3">
+                          <stop stop-color="#E09B3D" offset="0%"></stop>
+                          <stop stop-color="#C74C4D" offset="30%"></stop>
+                          <stop stop-color="#C21975" offset="60%"></stop>
+                          <stop stop-color="#7024C4" offset="100%"></stop>
+                      </linearGradient>
+                  </defs>
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="Artboard-Copy-7" transform="translate(-1019.000000, -114.000000)">
+                          <g id="instagram" transform="translate(1019.000000, 114.000000)">
+                              <path d="M386.878,0 L164.156,0 C73.64,0 0,73.64 0,164.156 L0,386.878 C0,477.394 73.64,551.034 164.156,551.034 L386.878,551.034 C477.394,551.034 551.034,477.394 551.034,386.878 L551.034,164.156 C551.033,73.64 477.393,0 386.878,0 Z M495.6,386.878 C495.6,446.923 446.923,495.6 386.878,495.6 L164.156,495.6 C104.111,495.6 55.434,446.923 55.434,386.878 L55.434,164.156 C55.434,104.11 104.111,55.434 164.156,55.434 L386.878,55.434 C446.923,55.434 495.6,104.11 495.6,164.156 L495.6,386.878 Z" id="Shape" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+                              <path d="M275.517,133 C196.933,133 133,196.933 133,275.516 C133,354.099 196.933,418.033 275.517,418.033 C354.101,418.033 418.034,354.1 418.034,275.516 C418.034,196.932 354.101,133 275.517,133 Z M275.517,362.6 C227.422,362.6 188.434,323.612 188.434,275.517 C188.434,227.422 227.423,188.434 275.517,188.434 C323.612,188.434 362.6,227.422 362.6,275.517 C362.6,323.611 323.611,362.6 275.517,362.6 Z" id="Shape" fill="url(#linearGradient-2)" fill-rule="nonzero"></path>
+                              <circle id="Oval" fill="url(#linearGradient-3)" cx="418.31" cy="134.07" r="34.15"></circle>
+                          </g>
+                      </g>
+                  </g>
+                </svg>
+                <div class="glow1"></div>
+                <div class="glow2"></div>
+                <div class="glow3"></div>
+              </button>
               
-              <div class="coment_main_top d-flex">
+              <button class="btn btn--vkontakte" onclick="location.href = 'https://vk.com/zhishi.agency'">
 
-                <div class="company_info d-flex">
-                  <div class="build-company d-flex">
-
-                  <img src="./img/icon-build-company.svg" class="icon_build-company" alt="build company">
-                  <div class="build-company_info">
-                      <span class="status_build-company">Исполнитель:</span> </br>
-                      <span class="name_build-company">ABSTRAKT</span>
-                  </div>
-                  </div>
-                  <div class="rating">
-                    <span>Оценка:</span>
-                    <div class="rating_item">
-                      <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                      <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                      <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                      <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                      <img src="./img/icon-star-grey.svg" alt="red-star" class="star">
-                    </div>
-                  </div>
-                </div>
-
-                <h3 class="coment_title">Укладка керамической плитки</h3>
-
-                <div class="coment_text_plus">
-                  <dt class="plus">Плюсы:</dt>
-                  <dd class="plus_text">Очень грамотная, коммуникабельная, легко нашла подход к ребенку, пунктуальная. Большим плюсом является, что занимается у нас дома, не нужно тратить время на дорогу. Минусы: нет Описание: Ребенок доволен, с удовольствием занимается</dd>
-                </div>
-
-                <div class="coment_text_minus">
-                  <dt class="minus">Минусы:</dt>
-                  <dd class="minus_text">Нет нареканий</dd>
-                </div>
-
-
-
-              </div>
-<!-- 
-              <div class="coment_main_title">
-                <h3>Укладка керамической плитки</h3>
-              </div> -->
-
-
-
-
+                <svg width="24px" height="24px" viewBox="0 0 512 290" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="Artboard-Copy-7" transform="translate(-689.000000, -417.000000)" fill="#436EAB">
+                          <g id="vk" transform="translate(689.000000, 417.000000)">
+                              <path d="M440.649,184.361 C457.633,200.943 475.558,216.543 490.791,234.797 C497.52,242.909 503.89,251.279 508.764,260.693 C515.67,274.075 509.415,288.801 497.416,289.6 L422.826,289.566 C403.588,291.162 388.241,283.418 375.337,270.264 C365.01,259.745 355.446,248.55 345.516,237.676 C341.445,233.232 337.184,229.05 332.094,225.744 C321.912,219.135 313.073,221.158 307.254,231.778 C301.328,242.58 299.983,254.54 299.401,266.578 C298.602,284.142 293.293,288.76 275.65,289.564 C237.945,291.342 202.161,285.638 168.918,266.617 C139.61,249.849 116.884,226.176 97.102,199.377 C58.589,147.194 29.094,89.852 2.586,30.904 C-3.381,17.623 0.983,10.494 15.637,10.241 C39.97,9.768 64.3,9.802 88.662,10.207 C98.552,10.352 105.099,16.024 108.918,25.367 C122.083,57.738 138.192,88.536 158.412,117.083 C163.797,124.683 169.288,132.284 177.106,137.633 C185.756,143.556 192.342,141.593 196.411,131.957 C198.993,125.847 200.124,119.266 200.706,112.723 C202.634,90.21 202.888,67.735 199.507,45.301 C197.431,31.3 189.545,22.236 175.574,19.587 C168.445,18.236 169.506,15.583 172.958,11.514 C178.953,4.496 184.592,0.127 195.833,0.127 L280.131,0.127 C293.402,2.746 296.349,8.708 298.166,22.061 L298.238,115.698 C298.093,120.867 300.82,136.208 310.131,139.629 C317.583,142.065 322.495,136.103 326.967,131.378 C347.15,109.957 361.555,84.641 374.424,58.427 C380.135,46.9 385.046,34.93 389.805,22.969 C393.331,14.094 398.864,9.727 408.861,9.92 L489.993,9.992 C492.399,9.992 494.833,10.027 497.163,10.426 C510.834,12.756 514.581,18.637 510.358,31.987 C503.705,52.932 490.76,70.387 478.103,87.922 C464.573,106.643 450.102,124.724 436.685,143.556 C424.357,160.756 425.336,169.424 440.649,184.361 Z" id="Path"></path>
+                          </g>
+                      </g>
+                  </g>
+                </svg>
+                <div class="glow1"></div>
+                <div class="glow2"></div>
+                <div class="glow3"></div>
+              </button>
+              
+              <label for="actionMenuButton" class="btn btn--large btn--menu"/>
+              
             </div>
-
-
-            <div class="coment_bottom d-flex">
-
-              <div class="master_tender d-flex">
-                <img src="./img/icon-master-tender.png" class="icon_master_tender" alt="master tender">
-                <div class="master_tender_info">
-                  <span class="status_master_tender">Заказчик:</span> </br>
-                  <span class="name_master_tender">Иван Иванов</span>
-                </div>
-              </div>
-
-              <span class="data_coment">21 декабря 2018</span>
-
-            </div>
-
-          </div>
-
-          <div class="reviews_item d-flex">
-
-              <div class="coment_main d-flex">
-  
-                <div class="cloud d-flex">
-                  <img src="./img/cloudmini.svg" alt="cloudmini">
-                </div>
-                
-                <div class="coment_main_top d-flex">
-  
-                  <div class="company_info d-flex">
-                    <div class="build-company d-flex">
-  
-                    <img src="./img/icon-build-company.svg" class="icon_build-company" alt="build company">
-                    <div class="build-company_info">
-                        <span class="status_build-company">Исполнитель:</span> </br>
-                        <span class="name_build-company">ABSTRAKT</span>
-                    </div>
-                    </div>
-                    <div class="rating">
-                    <span>Оценка:</span>
-                    <div class="rating_item">
-                      <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                      <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                      <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                      <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                      <img src="./img/icon-star-grey.svg" alt="red-star" class="star">
-                    </div>
-                    </div>
-                  </div>
-  
-                  <h3 class="coment_title">Укладка керамической плитки</h3>
-  
-                  <div class="coment_text_plus">
-                    <dt class="plus">Плюсы:</dt>
-                    <dd class="plus_text">Очень грамотная, коммуникабельная, легко нашла подход к ребенку, пунктуальная. Большим плюсом является, что занимается у нас дома, не нужно тратить время на дорогу. Минусы: нет Описание: Ребенок доволен, с удовольствием занимается</dd>
-                  </div>
-  
-                  <div class="coment_text_minus">
-                    <dt class="minus">Минусы:</dt>
-                    <dd class="minus_text">Нет нареканий</dd>
-                  </div>
-  
-  
-  
-                </div>
-  <!-- 
-                <div class="coment_main_title">
-                  <h3>Укладка керамической плитки</h3>
-                </div> -->
-  
-  
-  
-  
-              </div>
-  
-  
-              <div class="coment_bottom d-flex">
-  
-                <div class="master_tender d-flex">
-                  <img src="./img/icon-master-tender.png" class="icon_master_tender" alt="master tender">
-                  <div class="master_tender_info">
-                    <span class="status_master_tender">Заказчик:</span> </br>
-                    <span class="name_master_tender">Иван Иванов</span>
-                  </div>
-                </div>
-  
-                <span class="data_coment">21 декабря 2018</span>
-  
-              </div>
-  
-          </div>
-
-          <div class="reviews_item d-flex">
-
-              <div class="coment_main d-flex">
-  
-                <div class="cloud d-flex">
-                  <img src="./img/cloudmini.svg" alt="cloudmini">
-                </div>
-                
-                <div class="coment_main_top d-flex">
-  
-                  <div class="company_info d-flex">
-                    <div class="build-company d-flex">
-  
-                    <img src="./img/icon-build-company.svg" class="icon_build-company" alt="build company">
-                    <div class="build-company_info">
-                        <span class="status_build-company">Исполнитель:</span> </br>
-                        <span class="name_build-company">ABSTRAKT</span>
-                    </div>
-                    </div>
-                    <div class="rating">
-                    <span>Оценка:</span>
-                    <div class="rating_item">
-                      <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                      <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                      <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                      <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                      <img src="./img/icon-star-grey.svg" alt="red-star" class="star">
-                    </div>
-                    </div>
-                  </div>
-  
-                  <h3 class="coment_title">Укладка керамической плитки</h3>
-  
-                  <div class="coment_text_plus">
-                    <dt class="plus">Плюсы:</dt>
-                    <dd class="plus_text">Очень грамотная, коммуникабельная, легко нашла подход к ребенку, пунктуальная. Большим плюсом является, что занимается у нас дома, не нужно тратить время на дорогу. Минусы: нет Описание: Ребенок доволен, с удовольствием занимается</dd>
-                  </div>
-  
-                  <div class="coment_text_minus">
-                    <dt class="minus">Минусы:</dt>
-                    <dd class="minus_text">Нет нареканий</dd>
-                  </div>
-  
-  
-  
-                </div>
-  <!-- 
-                <div class="coment_main_title">
-                  <h3>Укладка керамической плитки</h3>
-                </div> -->
-  
-  
-  
-  
-              </div>
-  
-  
-              <div class="coment_bottom d-flex">
-  
-                <div class="master_tender d-flex">
-                  <img src="./img/icon-master-tender.png" class="icon_master_tender" alt="master tender">
-                  <div class="master_tender_info">
-                    <span class="status_master_tender">Заказчик:</span> </br>
-                    <span class="name_master_tender">Иван Иванов</span>
-                  </div>
-                </div>
-  
-                <span class="data_coment">21 декабря 2018</span>
-  
-              </div>
-  
-          </div>
-  
-          <div class="reviews_item d-flex">
-  
-                <div class="coment_main d-flex">
-    
-                  <div class="cloud d-flex">
-                    <img src="./img/cloudmini.svg" alt="cloudmini">
-                  </div>
-                  
-                  <div class="coment_main_top d-flex">
-    
-                    <div class="company_info d-flex">
-                      <div class="build-company d-flex">
-    
-                      <img src="./img/icon-build-company.svg" class="icon_build-company" alt="build company">
-                      <div class="build-company_info">
-                          <span class="status_build-company">Исполнитель:</span> </br>
-                          <span class="name_build-company">ABSTRAKT</span>
-                      </div>
-                      </div>
-                      <div class="rating">
-                      <span>Оценка:</span>
-                      <div class="rating_item">
-                        <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                        <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                        <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                        <img src="./img/icon-star-red.svg" alt="red-star" class="star">
-                        <img src="./img/icon-star-grey.svg" alt="red-star" class="star">
-                      </div>
-                      </div>
-                    </div>
-    
-                    <h3 class="coment_title">Укладка керамической плитки</h3>
-    
-                    <div class="coment_text_plus">
-                      <dt class="plus">Плюсы:</dt>
-                      <dd class="plus_text">Очень грамотная, коммуникабельная, легко нашла подход к ребенку, пунктуальная. Большим плюсом является, что занимается у нас дома, не нужно тратить время на дорогу. Минусы: нет Описание: Ребенок доволен, с удовольствием занимается</dd>
-                    </div>
-    
-                    <div class="coment_text_minus">
-                      <dt class="minus">Минусы:</dt>
-                      <dd class="minus_text">Нет нареканий</dd>
-                    </div>
-    
-                  </div>
-                </div>
-    
-    
-                <div class="coment_bottom d-flex">
-    
-                  <div class="master_tender d-flex">
-                    <img src="./img/icon-master-tender.png" class="icon_master_tender" alt="master tender">
-                    <div class="master_tender_info">
-                      <span class="status_master_tender">Заказчик:</span> </br>
-                      <span class="name_master_tender">Иван Иванов</span>
-                    </div>
-                  </div>
-    
-                  <span class="data_coment">21 декабря 2018</span>
-    
-                </div>
-    
-          </div>
-
-
-
+            
         </div>
+      </div>
 
-        <div class="btn_more_reviews d-flex">Показать больше</div>
-    </div>
-    <!-- НАЧАЛО КОНТЕЙНЕРА СТАТЕЙ -->
-    <div class="container_section d-flex">
+      <!-- ТЕКСТОВЫЙ БЛОК -->
+      <div class="section d-flex">
+        <!-- <h4>01.ГЛАВНАЯ</h4> -->
+        <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+    width="530px" height="100px" viewBox="0 0 530 100">
+      <style type="text/css">
 
-      <div class="section_main d-flex">
+        <![CDATA[
 
-        <div class="section_main_top d-flex">
+            text {
+              filter: url(#filter);
+              fill: white;
+                font-family: 'GothamProMedium', sans-serif;
+                font-size: 74px;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+                  }
+        ]]>
+      </style>
+    <defs>
 
-          <h2>Статьи из нашей базы</h2>
-          <div class="tabs d-flex">
-            <div class="tab_left d-flex">
-              <img src="./img/pointerleft.svg" alt="pointerleft">
-            </div>
-            <div class="tab_right d-flex">
-              <img src="./img/pointerright.svg" alt="pointerright">
-            </div>
-          </div>
+      <filter id="filter">
+          <feFlood flood-color="black" result="black" />
+          <feFlood flood-color="red" result="flood1" />
+          <feFlood flood-color="limegreen" result="flood2" />
+        <feOffset in="SourceGraphic" dx="3" dy="0" result="off1a"/>
+        <feOffset in="SourceGraphic" dx="2" dy="0" result="off1b"/>
+        <feOffset in="SourceGraphic" dx="-3" dy="0" result="off2a"/>
+        <feOffset in="SourceGraphic" dx="-2" dy="0" result="off2b"/>
+          <feComposite in="flood1" in2="off1a" operator="in"  result="comp1" />
+          <feComposite in="flood2" in2="off2a" operator="in" result="comp2" />
 
-        </div>
+          <feMerge x="0" width="100%" result="merge1">
+          <feMergeNode in = "black" />
+          <feMergeNode in = "comp1" />
+          <feMergeNode in = "off1b" />
 
-        <div class="section_main_content d-flex">
+          <animate 
+            attributeName="y" 
+              id = "y"
+              dur ="4s"
+              
+              values = '104px; 104px; 30px; 105px; 30px; 2px; 2px; 50px; 40px; 105px; 105px; 20px; 6ßpx; 40px; 104px; 40px; 70px; 10px; 30px; 104px; 102px'
 
-          <div class="section_main_content_article d-flex">
+              keyTimes = '0; 0.362; 0.368; 0.421; 0.440; 0.477; 0.518; 0.564; 0.593; 0.613; 0.644; 0.693; 0.721; 0.736; 0.772; 0.818; 0.844; 0.894; 0.925; 0.939; 1'
 
-            <div class="article_rubric d-flex">
-              <img src="./img/ansvo-inarticle.svg" alt="logo-in-article">
-              <span>Ремонт и строительство</span>
-            </div>
-
-            <div class="article_main d-flex">
-              <h3>Нюансы строительства дома на глинистом участке</h3>
-              <div class="article_main_text">
-                <p>«Эффективное управление затратами в агробизнесе» — главная тема Fashion-фермер 2018. В этом году полевая выставочная площадка</p>
-              </div>
-              <div class="article_main_readmore">
-                <span>Читать подробнее</span>
-              </div>
-            </div>
-
-            <div class="article_info d-flex">
-              <div class="article_info_coment d-flex">
-                <img src="./img/icon-chat.svg" alt="chat">
-                <span>14</span>
-              </div>
-
-              <div class="article_info_view d-flex">
-                <img src="./img/icon-eye.svg" alt="eye">
-                <span>211</span>
-              </div>
-
-              <time>21 декабря 2018</time>
-
-            </div>
-
-          </div>
-
-          <div class="section_main_content_article d-flex">
-
-              <div class="article_rubric d-flex">
-                <img src="./img/ansvo-inarticle.svg" alt="logo-in-article">
-                <span>Ремонт и строительство</span>
-              </div>
+              repeatCount = "indefinite" />
   
-              <div class="article_main d-flex">
-                <h3>Нюансы строительства дома на глинистом участке</h3>
-                <div class="article_main_text">
-                  <p>«Эффективное управление затратами в агробизнесе» — главная тема Fashion-фермер 2018. В этом году полевая выставочная площадка</p>
+          <animate attributeName="height" 
+              id = "h" 
+              dur ="4s"
+              
+              values = '10px; 0px; 10px; 30px; 50px; 0px; 10px; 0px; 0px; 0px; 10px; 50px; 40px; 0px; 0px; 0px; 40px; 30px; 10px; 0px; 50px'
+
+              keyTimes = '0; 0.362; 0.368; 0.421; 0.440; 0.477; 0.518; 0.564; 0.593; 0.613; 0.644; 0.693; 0.721; 0.736; 0.772; 0.818; 0.844; 0.894; 0.925; 0.939; 1'
+
+              repeatCount = "indefinite" />
+          </feMerge>
+        
+
+        <feMerge x="0" width="100%" y="60px" height="65px" result="merge2">
+          <feMergeNode in = "black" />
+          <feMergeNode in = "comp2" />
+          <feMergeNode in = "off2b" />
+
+          <animate attributeName="y" 
+              id = "y"
+              dur ="4s"
+              values = '103px; 104px; 69px; 53px; 42px; 104px; 78px; 89px; 96px; 100px; 67px; 50px; 96px; 66px; 88px; 42px; 13px; 100px; 100px; 104px;' 
+
+              keyTimes = '0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326; 0.357; 0.400; 0.408; 0.461; 0.493; 0.513; 0.548; 0.577; 0.613; 1'
+
+              repeatCount = "indefinite" />
+  
+          <animate attributeName="height" 
+              id = "h"
+              dur = "4s"
+            
+            values = '0px; 0px; 0px; 16px; 16px; 12px; 12px; 0px; 0px; 5px; 10px; 22px; 33px; 11px; 0px; 0px; 10px'
+
+              keyTimes = '0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326; 0.357; 0.400; 0.408; 0.461; 0.493; 0.513;  1'
+              
+              repeatCount = "indefinite" />
+          </feMerge>
+        
+        <feMerge>
+          <feMergeNode in="SourceGraphic" />	
+
+          <feMergeNode in="merge1" /> 
+        <feMergeNode in="merge2" />
+
+          </feMerge>
+        </filter>
+
+    </defs>
+
+  <g>
+    <text x="0" y="50">Маркетинг</text>
+  </g>
+  <g><text x="0" y="130">без ошибок</text></g>
+        </svg>
+        <!-- <h1 class="zoomIn">Маркетинг без ошибок</h1> -->
+        <div class="slide_text d-flex">
+          <!--Sheet Slider-->
+          <div class="sheetSlider sh-default sh-auto d-flex">
+              <input id="s1" type="radio" name="slide1" checked/> 
+              <input id="s2" type="radio" name="slide1"/> 
+              <input id="s3" type="radio" name="slide1"/> 
+              <input id="s4" type="radio" name="slide1"/> 
+              <input id="s5" type="radio" name="slide1"/> 
+              <div class="sh__content d-flex">
+                <!-- Slider Item -->
+                <div class="sh__item">
+                    <!-- <img src="img/slide-img01.jpg" alt="imgText"/> -->
+                    <!-- Item Info -->
+                    <div class="sh__meta">
+                      <h3>Не просто web-студия</h3>
+                      <span>Опыт нашей команды не заканчивается на создании web-продуктов. Среди нас есть специалисты со знанием маркетинга, что помогает создавать более осмысленные вещи и получать прогнозируемый резудьтат.</span>
+                    </div>
                 </div>
-                <div class="article_main_readmore">
-                  <span>Читать подробнее</span>
+                <!-- Slider Item -->
+                <div class="sh__item">
+                    <!-- <img src="img/slide-img02.jpg" alt="imgText"/> -->
+                    <!-- Item Info -->
+                    <div class="sh__meta">
+                      <h3>Комплексность подхода</h3>
+                      <span>Специализируемся на комплексных стратегиях увеличения продаж, полностью погружаемся в бизнес клиента. Анализируем конъюнктуру, понимаем цели и задачи в разных отраслях, строим стратегии, подбираем и используем эффективные инструменты.</span>
+                    </div>
                 </div>
-              </div>
-  
-              <div class="article_info d-flex">
-                <div class="article_info_coment d-flex">
-                  <img src="./img/icon-chat.svg" alt="chat">
-                  <span>14</span>
+                <!-- Slider Item -->
+                <div class="sh__item">
+                    <!-- <img src="img/slide-img03.jpg" alt="imgText"/> -->
+                    <!-- Item Info -->
+                    <div class="sh__meta">
+                      <h3>Построение коммуникации</h3>
+                      <span>Web-приложения и сайты все чаще становятся основным способом общения покупателей с брендами компаний. Визуальный язык и эффективный интерфейс должен отражать индивидуальность и ценности бренда.</span>
+                    </div>
                 </div>
-  
-                <div class="article_info_view d-flex">
-                  <img src="./img/icon-eye.svg" alt="eye">
-                  <span>211</span>
+                <!-- Slider Item -->
+                <div class="sh__item">
+                    <!-- <img src="img/slide-img04.jpg" alt="imgText"/> -->
+                    <!-- Item Info -->
+                    <div class="sh__meta">
+                      <h3>Создание индивидуальности</h3>
+                      <span>Новые времена требуют обновления фирменного стиля. Плохой брендинг так же может заставить сомневаться в качестве предоставляемых услуг. </span>
+                    </div>
                 </div>
-  
-                <time>21 декабря 2018</time>
-  
-              </div>
-  
-          </div>
-
-          <div class="section_main_content_article d-flex">
-
-              <div class="article_rubric d-flex">
-                <img src="./img/ansvo-inarticle.svg" alt="logo-in-article">
-                <span>Ремонт и строительство</span>
-              </div>
-  
-              <div class="article_main d-flex">
-                <h3>Нюансы строительства дома на глинистом участке</h3>
-                <div class="article_main_text">
-                  <p>«Эффективное управление затратами в агробизнесе» — главная тема Fashion-фермер 2018. В этом году полевая выставочная площадка</p>
+                <!-- Slider Item -->
+                <div class="sh__item">
+                    <!-- <img src="img/slide-img05.jpg" alt="imgText"/> -->
+                    <!-- Item Info -->
+                    <div class="sh__meta">
+                      <h3>Производство контента</h3>
+                      <span>Небольшой ролик о компании донесет информации больше, чем десятки статей на сайте. При просмотре зрителю сразу предлагается и изображение, и текст, и определенный набор эмоций. Поэтому видео легко запоминается, увеличивая узнаваемость бренда. </span>
+                    </div>
                 </div>
-                <div class="article_main_readmore">
-                  <span>Читать подробнее</span>
-                </div>
-              </div>
-  
-              <div class="article_info d-flex">
-                <div class="article_info_coment d-flex">
-                  <img src="./img/icon-chat.svg" alt="chat">
-                  <span>14</span>
-                </div>
-  
-                <div class="article_info_view d-flex">
-                  <img src="./img/icon-eye.svg" alt="eye">
-                  <span>211</span>
-                </div>
-  
-                <time>21 декабря 2018</time>
-  
-              </div>
-  
-          </div>
+              </div><!-- .sh__content -->
+              <!--botones -->
+              <div class="sh__btns">
+                <label for="s1"></label>
+                <label for="s2"></label>
+                <label for="s3"></label>
+                <label for="s4"></label>
+                <label for="s5"></label>
+              </div><!-- .sh__btns -->
+              <!--flechas-->
+              <div class="sh__arrows">
+                <label for="s1"></label>
+                <label for="s2"></label>
+                <label for="s3"></label>
+                <label for="s4"></label>
+                <label for="s5"></label>
+              </div><!-- .sh__arrows -->
+              <!--Control-->
+              <!-- <button class="sh-control"></button>   -->
+          </div><!-- .sheetSlider -->
         </div>
 
       </div>
+      <!-- АБСТРАКТНЫЙ ЭЛЕМЕНТ С ПАРАЛАКС-->
+      <div class="element d-flex">
+        <div class="container_paralax  d-flex">
+          <img id="c1" class="paralax_item zhishi" src="./img/backgroundnamecompany.svg" alt="zhishi print">
+          <img id="c2" class="paralax_item abstrakt" src="./img/abstract figure.png" alt="abstrakt circle">
+          <img id="c3" class="paralax_item figure" src="./img/sculpt 1 screen.png" alt="figure">
+        </div>
+      </div>
+      <!-- ПЕРЕКЛЮЧАТЕЛЬ СТРАНИЦ -->
+      <div class="tumbler">
+      </div>
     </div>
+    <!-- ДВИЖУЩАЯСЯ ВОЛНА -->
+    <div class="container_waves">
+        <div class="wave d-flex">
+          <div class="wave_1"></div>
+          <div class="wave_2"></div>
+          <div class="wave_3"></div>
+        </div>
+    </div>
+    <!-- УСЛУГИ -->
+    <div class="services d-flex">
+      <div class="services_svg">
+        <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+        width="400px" height="100px" viewBox="0 0 530 100">
+          <style type="text/css">
+    
+
+    
+                text {
+                  filter: url(#filter);
+                  fill: white;
+                    font-family: 'GothamProMedium', sans-serif;
+                    font-size: 64px;
+                  -webkit-font-smoothing: antialiased;
+                  -moz-osx-font-smoothing: grayscale;
+                      }
+
+          </style>
+        <defs>
+    
+          <filter id="filter">
+              <feFlood flood-color="black" result="black" />
+              <feFlood flood-color="red" result="flood1" />
+              <feFlood flood-color="limegreen" result="flood2" />
+            <feOffset in="SourceGraphic" dx="3" dy="0" result="off1a"/>
+            <feOffset in="SourceGraphic" dx="2" dy="0" result="off1b"/>
+            <feOffset in="SourceGraphic" dx="-3" dy="0" result="off2a"/>
+            <feOffset in="SourceGraphic" dx="-2" dy="0" result="off2b"/>
+              <feComposite in="flood1" in2="off1a" operator="in"  result="comp1" />
+              <feComposite in="flood2" in2="off2a" operator="in" result="comp2" />
+    
+              <feMerge x="0" width="100%" result="merge1">
+              <feMergeNode in = "black" />
+              <feMergeNode in = "comp1" />
+              <feMergeNode in = "off1b" />
+    
+              <animate 
+                attributeName="y" 
+                  id = "y"
+                  dur ="4s"
+                  
+                  values = '104px; 104px; 30px; 105px; 30px; 2px; 2px; 50px; 40px; 105px; 105px; 20px; 6ßpx; 40px; 104px; 40px; 70px; 10px; 30px; 104px; 102px'
+    
+                  keyTimes = '0; 0.362; 0.368; 0.421; 0.440; 0.477; 0.518; 0.564; 0.593; 0.613; 0.644; 0.693; 0.721; 0.736; 0.772; 0.818; 0.844; 0.894; 0.925; 0.939; 1'
+    
+                  repeatCount = "indefinite" />
+      
+              <animate attributeName="height" 
+                  id = "h" 
+                  dur ="4s"
+                  
+                  values = '10px; 0px; 10px; 30px; 50px; 0px; 10px; 0px; 0px; 0px; 10px; 50px; 40px; 0px; 0px; 0px; 40px; 30px; 10px; 0px; 50px'
+    
+                  keyTimes = '0; 0.362; 0.368; 0.421; 0.440; 0.477; 0.518; 0.564; 0.593; 0.613; 0.644; 0.693; 0.721; 0.736; 0.772; 0.818; 0.844; 0.894; 0.925; 0.939; 1'
+    
+                  repeatCount = "indefinite" />
+              </feMerge>
+            
+    
+            <feMerge x="100px" width="100%" y="60px" height="65px" result="merge2">
+              <feMergeNode in = "black" />
+              <feMergeNode in = "comp2" />
+              <feMergeNode in = "off2b" />
+    
+              <animate attributeName="y" 
+                  id = "y"
+                  dur ="4s"
+                  values = '103px; 104px; 69px; 53px; 42px; 104px; 78px; 89px; 96px; 100px; 67px; 50px; 96px; 66px; 88px; 42px; 13px; 100px; 100px; 104px;' 
+    
+                  keyTimes = '0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326; 0.357; 0.400; 0.408; 0.461; 0.493; 0.513; 0.548; 0.577; 0.613; 1'
+    
+                  repeatCount = "indefinite" />
+      
+              <animate attributeName="height" 
+                  id = "h"
+                  dur = "4s"
+                
+                values = '0px; 0px; 0px; 16px; 16px; 12px; 12px; 0px; 0px; 5px; 10px; 22px; 33px; 11px; 0px; 0px; 10px'
+    
+                  keyTimes = '0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326; 0.357; 0.400; 0.408; 0.461; 0.493; 0.513;  1'
+                  
+                  repeatCount = "indefinite" />
+              </feMerge>
+            
+            <feMerge>
+              <feMergeNode in="SourceGraphic" />	
+    
+              <feMergeNode in="merge1" /> 
+            <feMergeNode in="merge2" />
+    
+              </feMerge>
+            </filter>
+    
+        </defs>
+    
+      <g>
+        <text x="0" y="50">Что мы делаем</text>
+      </g>
+        </svg>
+      </div>
+      <div class="container_services d-flex">
+
+        <div class="services_card card--two branding d-flex">
+          <h2>DESIGN</h2>
+          <div class="usl1 d-flex">
+            <p>Корпоративный брендинг</p>
+            <p>Создание фирменного стиля</p>
+            <p>Разработка упаковки продукта</p>
+          </div>
+        </div>
+
+        <div class="services_card card--two digital d-flex">
+          <h2>DIGITAL</h2>
+          <div class="usl1 d-flex">
+            <p>Одностраничные сайты</p>
+            <p>Корпоративные сайты</p>
+            <p>Высоконагруженные ресурсы</p>
+            <p>Мобильная разработка</p>
+            <p>Промосайты</p>
+          </div>
+        </div>
+
+        <div class="services_card card--two prodaction d-flex">
+          <h2>PRODACTION</h2>
+          <div class="usl1 d-flex">
+            <p>Съемка корпоративных роликов</p>
+            <p>Компьютерная графика</p>
+            <p>Создание фото-контента</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <!-- КЛИЕНТЫ -->
+    <div class="our_clients d-flex">
+      <div class="clients_svg">
+        <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+        width="400px" height="100px" viewBox="0 0 530 100">
+          <style type="text/css">
+
+                text {
+                  filter: url(#filter);
+                  fill: white;
+                    font-family: 'GothamProMedium', sans-serif;
+                    font-size: 64px;
+                  -webkit-font-smoothing: antialiased;
+                  -moz-osx-font-smoothing: grayscale;
+                      }
+
+          </style>
+        <defs>
+
+          <filter id="filter">
+              <feFlood flood-color="black" result="black" />
+              <feFlood flood-color="red" result="flood1" />
+              <feFlood flood-color="limegreen" result="flood2" />
+            <feOffset in="SourceGraphic" dx="3" dy="0" result="off1a"/>
+            <feOffset in="SourceGraphic" dx="2" dy="0" result="off1b"/>
+            <feOffset in="SourceGraphic" dx="-3" dy="0" result="off2a"/>
+            <feOffset in="SourceGraphic" dx="-2" dy="0" result="off2b"/>
+              <feComposite in="flood1" in2="off1a" operator="in"  result="comp1" />
+              <feComposite in="flood2" in2="off2a" operator="in" result="comp2" />
+    
+              <feMerge x="0" width="100%" result="merge1">
+              <feMergeNode in = "black" />
+              <feMergeNode in = "comp1" />
+              <feMergeNode in = "off1b" />
+    
+              <animate 
+                attributeName="y" 
+                  id = "y"
+                  dur ="4s"
+                  
+                  values = '104px; 104px; 30px; 105px; 30px; 2px; 2px; 50px; 40px; 105px; 105px; 20px; 6ßpx; 40px; 104px; 40px; 70px; 10px; 30px; 104px; 102px'
+    
+                  keyTimes = '0; 0.362; 0.368; 0.421; 0.440; 0.477; 0.518; 0.564; 0.593; 0.613; 0.644; 0.693; 0.721; 0.736; 0.772; 0.818; 0.844; 0.894; 0.925; 0.939; 1'
+    
+                  repeatCount = "indefinite" />
+      
+              <animate attributeName="height" 
+                  id = "h" 
+                  dur ="4s"
+                  
+                  values = '10px; 0px; 10px; 30px; 50px; 0px; 10px; 0px; 0px; 0px; 10px; 50px; 40px; 0px; 0px; 0px; 40px; 30px; 10px; 0px; 50px'
+    
+                  keyTimes = '0; 0.362; 0.368; 0.421; 0.440; 0.477; 0.518; 0.564; 0.593; 0.613; 0.644; 0.693; 0.721; 0.736; 0.772; 0.818; 0.844; 0.894; 0.925; 0.939; 1'
+    
+                  repeatCount = "indefinite" />
+              </feMerge>
+            
+    
+            <feMerge x="100px" width="100%" y="60px" height="65px" result="merge2">
+              <feMergeNode in = "black" />
+              <feMergeNode in = "comp2" />
+              <feMergeNode in = "off2b" />
+    
+              <animate attributeName="y" 
+                  id = "y"
+                  dur ="4s"
+                  values = '103px; 104px; 69px; 53px; 42px; 104px; 78px; 89px; 96px; 100px; 67px; 50px; 96px; 66px; 88px; 42px; 13px; 100px; 100px; 104px;' 
+    
+                  keyTimes = '0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326; 0.357; 0.400; 0.408; 0.461; 0.493; 0.513; 0.548; 0.577; 0.613; 1'
+    
+                  repeatCount = "indefinite" />
+      
+              <animate attributeName="height" 
+                  id = "h"
+                  dur = "4s"
+                
+                values = '0px; 0px; 0px; 16px; 16px; 12px; 12px; 0px; 0px; 5px; 10px; 22px; 33px; 11px; 0px; 0px; 10px'
+    
+                  keyTimes = '0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326; 0.357; 0.400; 0.408; 0.461; 0.493; 0.513;  1'
+                  
+                  repeatCount = "indefinite" />
+              </feMerge>
+            
+            <feMerge>
+              <feMergeNode in="SourceGraphic" />	
+    
+              <feMergeNode in="merge1" /> 
+            <feMergeNode in="merge2" />
+    
+              </feMerge>
+            </filter>
+    
+        </defs>
+    
+      <g>
+        <text x="0" y="50">С кем работали</text>
+      </g>
+        </svg>
+      </div>
+      <div class="container_clients d-flex">
+        <div class="client d-flex">
+          <img src="./img/agroportal-logo.png" alt="agroportal">
+        </div>
+        <div class="client d-flex">
+          <img src="./img/fuoodcity-logo.png" alt="foodcity">
+        </div>
+        <div class="client d-flex">
+          <img src="./img/iz-ruk-v-ruki-logo.png" alt="irr">
+        </div>
+        <div class="client d-flex">
+          <img src="./img/energy-logo.png" alt="energy">
+        </div>
+        <div class="client d-flex">
+          <img src="./img/agropraktika-logo.png" alt="agropraktika">
+        </div>
+        <div class="client d-flex">
+          <img src="./img/job-logo.png" alt="jobru">
+        </div>
+        <div class="client d-flex">
+          <img src="./img/tvzavr-logo.png" alt="tvzavr">
+        </div>
+        <div class="client d-flex">
+          <img src="./img/sunmar-logo.png" alt="sunmar">
+        </div>
+        <div class="client sotmik d-flex">
+          <img src="./img/sotmik-logo.png" alt="sotmik">
+        </div>
+        <div class="client d-flex">
+          <img src="./img/Orbita-logo.png" alt="orbita">
+        </div>
+      </div>
+    </div>
+
   </main>
-  <!-- НАЧАЛО ПОДВАЛА СТРАНИЦЫ -->
-  <footer>
-    <!-- НАЧАЛО ОСНОВНОЙ ИНФОРМАЦИИ ПОДВАЛА -->
-    <div class="footer_main d-flex">
-      <!-- НАЧАЛО ЛОГОТИП ПОЧТА ТЕЛЕФОН СОЦСЕТИ -->
-      <div class="footer_contacts d-flex">
-        <div class="footer_contacts_item d-flex">
-          <img src="./img/logo.svg" alt="logo">
-        </div>
 
-        <div class="footer_contacts_item">
-          <span class="title">E-mail:</span><br/>
-          <span class="text">info@ansvo.ru</span>
-        </div>
-
-        <div class="footer_contacts_item">
-          <span class="title">По вопросам сервиса:</span><br/>
-          <span class="text">8 (965) 715-19-91</span>
-        </div>
-
-        <div class="footer_contacts_item d-flex">
-          <img src="./img/icon-vk.svg" alt="vk">
-          <img src="./img/icon-facebook.svg" alt="fb">
-          <img src="./img/icon-instagram.svg" alt="ingr">
-        </div>
-
-      </div>
-      <!-- НАЧАЛО МЕНЮ С РАЗДЕЛАМИ САЙТА -->
-      <div class="footer_menu d-flex">
-
-        <div class="footer_menu_item d-flex">
-          <span>Информация</span>
-          <a href="#">О проекте</a>
-          <a href="#">Команда</a>
-          <a href="#">Контакты</a>
-        </div>
-
-        <div class="footer_menu_item d-flex">
-          <span>Заказчикам</span>
-          <a href="#">Регистрация</a>
-          <a href="#">Как это работает</a>
-          <a href="#">Каталог компаний</a>
-          <a href="#">Ленты событий</a>
-          <a href="#">База договоров</a>
-          <a href="#">Основные понятия</a>
-          <a href="#">Помощь</a>
-        </div>
-
-        <div class="footer_menu_item d-flex">
-          <span>Исполнителям</span>
-          <a href="#">Регистрация</a>
-          <a href="#">Как это работает</a>
-          <a href="#" class="akaunt"><span>PRO</span> аккаунт</a>
-        </div>
-
-        <div class="footer_menu_item d-flex">
-            <span>Поиск работы</span>
-            <a href="#">Разместить вакансию</a>
-            <a href="#">Посмотреть вакансии</a>
-          </div>
-
-      </div>
-    </div>
-    <!-- НИЗ ПОДВАЛА -->
-    <div class="footer_down d-flex">
-      <div class="footer_down_info d-flex">
-        
-        <div class="footer_down_info_item d-flex">
-          <span>©Ansvo, 2019</span>
-        </div>
-
-        <div class="footer_down_info_item d-flex">
-          <span>Пользовательское соглашение</span>
-        </div>
-
-        <div class="footer_down_info_item d-flex">
-          <span>Политика конфиденциальности</span>
-        </div>
-
-      </div>
-    </div>
-  </footer>
 </body>
 </html>
